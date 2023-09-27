@@ -9,6 +9,10 @@
     <title>Document</title>
 </head>
 <body>
+<form method="get" action="/giang-vien/hien-thi/search">
+     <label>search <input  name="ten"/></label>
+    <button type="submit">tim kiem</button>
+</form>
 <button><a href="/giang-vien/hien-thi/add">add</a></button>
         <table>
             <tr>

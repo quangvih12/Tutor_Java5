@@ -36,6 +36,13 @@ public class GiangVienController {
         return "add";
     }
 
+    @GetMapping("/search")
+    public String search(@RequestParam String ten, Model model) {
+        List<GiangVien> list = giangVienServices.search(ten);
+        model.addAttribute("giangvien",list);
+        return "index";
+    }
+
 
     @GetMapping("/delete/{id}")
     public String delete(@PathVariable String id) {

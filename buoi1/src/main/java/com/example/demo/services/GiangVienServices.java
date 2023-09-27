@@ -29,6 +29,16 @@ public class GiangVienServices {
         return this.giangVienList;
     }
 
+    public List<GiangVien> search(String ten){
+        List<GiangVien> lisst = new ArrayList<>();
+        for (GiangVien o: giangVienList) {
+            if(o.getTen().matches(".*"+ten+".*")){
+                lisst.add(o);
+            }
+        }
+        return lisst;
+    }
+
     public GiangVien getOne(String id) {
         for (GiangVien o : giangVienList) {
             if (o.getId().equals(id)) {
